@@ -193,7 +193,7 @@ public class EmployeeInformation implements EmployeeInformationIM{
 	public void modify(String sql) {
 		ConnectionDemo01 dbcs = new ConnectionDemo01();
 		try(Connection conn = dbcs.getConnection(); // 获取数据库接
-		Statement state = conn.createStatement();){
+            Statement state=conn.createStatement();){
 			state.executeUpdate(sql);
 			conn.close();
 		}catch (SQLException e) {
